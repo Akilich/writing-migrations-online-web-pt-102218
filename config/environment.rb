@@ -19,6 +19,8 @@ def drop_db
   end
 end
 
+
+
 		ActiveRecord::Base.establish_connection(
   	  :adapter => "sqlite3",
 		  :database => "db/artists.sqlite"
@@ -29,8 +31,9 @@ end
 		  id INTEGER PRIMARY KEY,
 		  name TEXT,
 		  grade INTEGER,
-		  birthdate INTEGER
+		  birthdate INTEGER 
 		  )
-	  SQL
-	  
-	ActiveRecord::Base.connection.execute(sql)
+SQL
+
+ActiveRecord::Base.connection.execute(sql)	  
+	
