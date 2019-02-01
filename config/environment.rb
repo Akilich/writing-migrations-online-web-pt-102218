@@ -28,8 +28,9 @@ end
 		  CREATE TABLE IF NOT EXISTS artists (
 		  id INTEGER PRIMARY KEY,
 		  name TEXT,
-		  genre TEXT,
+		  grade INTEGER,
+		  birthdate INTEGER
 		  )
 	  SQL
-		
+	  
 	ActiveRecord::Base.connection.execute(sql)
