@@ -18,22 +18,3 @@ def drop_db
     DB.execute("DROP TABLE #{table}")
   end
 end
-
-
-
-		ActiveRecord::Base.establish_connection(
-  	  :adapter => "sqlite3",
-		  :database => "db/school-development.db"
-		)
-
-		sql = <<-SQL
-		  CREATE TABLE IF NOT EXISTS artists (
-		  id INTEGER PRIMARY KEY,
-		  name TEXT,
-		  grade INTEGER,
-		  birthdate INTEGER 
-		  )
-SQL
-
-ActiveRecord::Base.connection.execute(sql)	  
-	
